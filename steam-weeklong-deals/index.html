@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript">
+        
+            function loadPage(page)
+            {
+                $.ajax({
+                    url: 'loadpage.php?page='+page,
+                    dataType: 'json',
+                    success: function(response) {
+                        console.log(response);
+                    }
+                });
+            }
+
+            loadPage(1);
+        
+        </script>
+    </head>
+    <body>
+        <div id="list"></div>
+    </body>
+</html>
